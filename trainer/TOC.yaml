@@ -1,0 +1,19 @@
+---
+# List of trainings provided by us
+training:
+  - VCS
+  - Build & release
+  - Cloud
+  - SCM:
+    - Ansible:
+      - day1:
+        session1: ['Introduction to SCM' ,'Ansible']
+        session2:
+          - Inventory
+          - Adhoc Commands
+      - day2:
+        session1: Modules
+        session2: Playbooks
+      - day3: {session1: ['Variables','Roles'], session2: ['Tower']}
+  - monitoring
+...

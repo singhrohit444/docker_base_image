@@ -1,0 +1,13 @@
+#pass host names as argument
+#ansible-playbook -e "hosts=webazb" nginxsetup.play
+---
+- name: Nginx Setup play
+  hosts: "{{hosts}}"
+  tasks:
+    - name: Installing nginx
+      apt: name=nginx state=installed
+    - name: Start nginx
+      service: name=nginx state=started enabled=on
+    - name: Create file
+      template: src=index.j2 dest=/usr/share/nginx/html/index.html
+...

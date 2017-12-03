@@ -1,0 +1,5 @@
+#ansible-playbook  consolidated.play
+---
+- import_playbook: play1.play
+- import_playbook: play2.play
+...

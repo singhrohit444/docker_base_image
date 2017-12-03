@@ -1,0 +1,11 @@
+#pass host names as argument
+#ansible-playbook  -e "hosts=webaza" factcreator.play
+---
+- name: Custom facts creator
+  hosts: "{{hosts}}"
+  tasks:
+    - name: Creating facts direcotry
+      file: path=/etc/ansible/facts.d state=directory
+    - name: Create custom fact file
+      template: src=metainfo.j2 dest=/etc/ansible/facts.d/metainfo.fact
+...
