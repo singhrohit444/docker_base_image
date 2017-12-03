@@ -1,0 +1,4 @@
+FROM training/ansible
+
+COPY cserver.pub /root/.ssh/id_rsa.pub
+COPY cserver /root/.ssh/id_rsa

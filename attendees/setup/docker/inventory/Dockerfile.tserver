@@ -1,0 +1,5 @@
+FROM training/ansible
+
+COPY cserver.pub /root/.ssh/authorized_keys
+
+RUN apt-get -y install openssh-server
